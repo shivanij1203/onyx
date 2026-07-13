@@ -77,3 +77,9 @@ export type {
   SubmitProps as AuthSubmitProps,
   SubmitLabel as AuthSubmitLabel,
 } from "@opal/layouts/auth/components";
+
+/* ConfirmationModalLayout */
+export {
+  ConfirmationModalLayout,
+  type ConfirmationModalProps,
+} from "@opal/layouts/modal/components";
