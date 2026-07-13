@@ -83,3 +83,6 @@ export {
   PageLoader,
   type PageLoaderProps,
 } from "@opal/layouts/page-loader/components";
+
+/* TagList */
+export { TagList, type TagListProps } from "@opal/layouts/tag-list/components";

@@ -95,6 +95,8 @@ HIDDEN_PATTERNS = {
     "opencode.json",
     ".env",
     ".gitignore",
+    "nextjs.log",
+    "nextjs.pid",
 }
 
 
@@ -838,6 +840,7 @@ class SessionManager:
         user_message_content: str,
         should_interrupt: Callable[[], bool] | None = None,
         should_abort_on_teardown: Callable[[], bool] | None = None,
+        turn_timeout_seconds: float | None = None,
     ) -> Generator[Any, None, None]:
         build_session = _streaming.load_turn_session(
             self._db_session, self._sandbox_manager, sandbox_id, session_id
@@ -855,6 +858,7 @@ class SessionManager:
             agent_model=build_session.agent_model,
             should_interrupt=should_interrupt,
             should_abort_on_teardown=should_abort_on_teardown,
+            turn_timeout_seconds=turn_timeout_seconds,
         )
 
     def merge_events_with_announces(
