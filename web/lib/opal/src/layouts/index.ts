@@ -77,3 +77,9 @@ export type {
   SubmitProps as AuthSubmitProps,
   SubmitLabel as AuthSubmitLabel,
 } from "@opal/layouts/auth/components";
+
+/* PageLoader */
+export {
+  PageLoader,
+  type PageLoaderProps,
+} from "@opal/layouts/page-loader/components";
